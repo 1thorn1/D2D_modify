@@ -3,7 +3,7 @@
 
 Scene::Scene()
 {
-	m_RelativeTransform = m_WorldTransform = D2D1::Matrix3x2F::Identity(); // ø® ¿Ã∞‘ ∏”æﬂ
+	m_RelativeTransform = m_WorldTransform = D2D1::Matrix3x2F::Identity();
 }
 
 Scene::~Scene()
@@ -33,4 +33,5 @@ void Scene::Update()
 
 void Scene::Render()
 {
+
 }

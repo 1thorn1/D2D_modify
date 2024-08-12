@@ -11,19 +11,17 @@ void TitleScene::Initialize()
 	Debug.Log("title 생성");
 	GameObject* obj = CreateGameObject<GameObject>();
 	BitmapScene* bit = obj->CreateComponent<BitmapScene>();
+	Script* scr = obj->CreateComponent<Script>();
+	scr->GetOwner()->GetComponent<Script>();
+
 	ResourceManager::CreateD2DBitmapFromFile(L"Asset/title.png", &bit->m_pBitmap);
-	
-	
-	//if (KeyManager.IsKeyDown(VK_F1))
-	//{
-	//	Debug.Log("in");
-	//	SceneManager::SetActWorld("play");
-	//}
 }
 
 void TitleScene::WorldEnter()
 {
-	Debug.Log("enter"); 
+	Debug.Log("enter");  
+	// 엔터 안되는 중 GameApp에서 Update 호출을 멈췄기 때문
+	// World -> Object -> Component 에서 update loop를 돌려줘야함
 }
 
 void TitleScene::WorldExit()

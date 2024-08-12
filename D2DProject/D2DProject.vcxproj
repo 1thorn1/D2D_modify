@@ -138,12 +138,14 @@
     <ClInclude Include="Jump.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="PlayScene.h" />
+    <ClInclude Include="PlayScript.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SDRun.h" />
     <ClInclude Include="SPlayer.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TitleBackground.h" />
     <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="TitleScript.h" />
     <ClInclude Include="VBall.h" />
   </ItemGroup>
   <ItemGroup>
@@ -157,10 +159,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="PlayScene.cpp" />
+    <ClCompile Include="PlayScript.cpp" />
     <ClCompile Include="SDRun.cpp" />
     <ClCompile Include="SPlayer.cpp" />
     <ClCompile Include="TitleBackground.cpp" />
     <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="TitleScript.cpp" />
     <ClCompile Include="VBall.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "BitmapScene.h"
 #include "D2DRender.h";
+#include "Debug.h"
 
 
 bool BitmapScene::SetBitmap(const std::wstring& strFileName)

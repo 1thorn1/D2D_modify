@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\Scene">
       <UniqueIdentifier>{98c4ca2e-95bc-4e10-9bb6-65fa63e9a5cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Script">
+      <UniqueIdentifier>{f3a0517d-8fa5-4056-91f3-2f26afd7be92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -78,6 +81,12 @@
     <ClInclude Include="TitleBackground.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="TitleScript.h">
+      <Filter>소스 파일\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScript.h">
+      <Filter>소스 파일\Script</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DemoApp.cpp">
@@ -124,6 +133,12 @@
     </ClCompile>
     <ClCompile Include="TitleBackground.cpp">
       <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScript.cpp">
+      <Filter>소스 파일\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScript.cpp">
+      <Filter>소스 파일\Script</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

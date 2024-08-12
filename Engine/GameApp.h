@@ -13,6 +13,7 @@
 #include "TimeManager.h"
 #include "Debug.h"
 #include "SceneManager.h"
+#include "Script.h"
 
 class GameApp
 {
