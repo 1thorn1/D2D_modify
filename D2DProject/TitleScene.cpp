@@ -1,4 +1,5 @@
 #include "TitleScene.h"
+#include "TitleScript.h"
 
 TitleScene::~TitleScene()
 {
@@ -13,6 +14,10 @@ void TitleScene::Initialize()
 	BitmapScene* bit = obj->CreateComponent<BitmapScene>();
 	Script* scr = obj->CreateComponent<Script>();
 	scr->GetOwner()->GetComponent<Script>();
+
+	GameObject* pobj = CreateGameObject<GameObject>();
+	TitleScript* tscr = pobj->CreateComponent<TitleScript>();
+	tscr->GetOwner()->GetComponent<TitleScript>();
 
 	ResourceManager::CreateD2DBitmapFromFile(L"Asset/title.png", &bit->m_pBitmap);
 }

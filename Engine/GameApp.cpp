@@ -88,7 +88,7 @@ void GameApp::Update()
 {
  /*   InputManager temp;
     if (temp.IsKeyDown(VK_F1))
-    {
+    { 
     	Debug.Log("in");
     	SceneManager::SetActWorld("play");
     }*/

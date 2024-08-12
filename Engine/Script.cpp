@@ -11,5 +11,5 @@ void Script::Initialize()
 void Script::Update()
 {
 	__super::Update();
-	Debug.Log("스크립트");
+	//Debug.Log("스크립트 업데이트");
 }
