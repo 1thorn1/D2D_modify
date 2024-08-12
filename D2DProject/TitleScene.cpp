@@ -12,13 +12,6 @@ void TitleScene::Initialize()
 	GameObject* obj = CreateGameObject<GameObject>();
 	BitmapScene* bit = obj->CreateComponent<BitmapScene>();
 	ResourceManager::CreateD2DBitmapFromFile(L"Asset/title.png", &bit->m_pBitmap);
-	
-	
-	//if (KeyManager.IsKeyDown(VK_F1))
-	//{
-	//	Debug.Log("in");
-	//	SceneManager::SetActWorld("play");
-	//}
 }
 
 void TitleScene::WorldEnter()
