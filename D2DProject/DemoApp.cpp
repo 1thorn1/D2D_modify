@@ -7,8 +7,6 @@
 #include "TitleScene.h"
 #include "PlayScene.h"
 
-Player* DemoApp::m_pPlayer = nullptr;
-
 void DemoApp::Initialize(HINSTANCE hInstance)
 {
 	TimeManager();

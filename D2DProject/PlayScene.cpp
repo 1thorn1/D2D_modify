@@ -1,6 +1,9 @@
 #include "PlayScene.h"
 #include "PlayScript.h"
-
+#include "GameManager.h"
+#include "VBall.h"
+#include "SPlayer.h"
+#include "Object.h"
 
 PlayScene::~PlayScene()
 {
@@ -20,6 +23,33 @@ void PlayScene::Initialize()
 	pscr->GetOwner()->GetComponent<PlayScript>();
 
 	ResourceManager::CreateD2DBitmapFromFile(L"Asset/Background.bmp", &bit->m_pBitmap);
+
+	// 깃발
+	GameObject* clone = this->CreateGameObject<GameObject>();
+	AnimationScene* flag = clone->CreateComponent<AnimationScene>();
+	ResourceManager::pInstance->CreateD2DBitmapFromFile(L"Asset/flag.png", &flag->m_pBitmap);
+	ResourceManager::pInstance->CreateAnimationAsset(L"CSV/flag.txt", &flag->m_pAnimationAsset);
+	flag->SetAnimation(4, 0);
+	flag->m_RelativeLocation = { 512 + 30 , 300 + 40 };
+	flag->m_RelativeScale = { 2.0f,2.0f };
+	clone->m_pRootScene = flag;
+
+
+	// 플레이어 1,2를 생성함
+	GameManager::p1 = this->CreateGameObject<SPlayer>();
+	GameManager::p2 = this->CreateGameObject<SPlayer>();
+	GameManager::p1->Initialize();
+
+	// wall을 생성함 
+	GameManager::wall = this->CreateGameObject<Object>();
+
+	GameManager::p1->input.up = 'W';
+	GameManager::p1->input.left = 'A';
+	GameManager::p1->input.down = 'S';
+	GameManager::p1->input.right = 'D';
+	GameManager::p1->input.enter = 'V';
+
+	clone = this->CreateGameObject<VBall>();
 }
 
 void PlayScene::WorldEnter()
