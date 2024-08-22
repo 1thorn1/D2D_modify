@@ -62,7 +62,7 @@ void VBall::ResolveCollision(Vector2F& location, Vector2F& velocity, float radiu
 
 void VBall::Initialize()
 {
-	this->gravityScale =300.f;
+	this->gravityScale = 300.f;
 }
 
 void VBall::Update()
@@ -125,18 +125,22 @@ void VBall::Update()
 		vb_velocity.y *= -0.5f;
 
 		// 2초 딜레이
-		static float delay;
-		delay += TimeManager::GetDeltaTime();
-		if (delay >= 1.0f)
+		static float delay = 0;
+		//delay += TimeManager::GetDeltaTime();
+
+		// 어유오어오요ㅕ엉ㅇ
+		int 엄 = 1;
 		{
-			// 어유오어오요ㅕ엉ㅇ
-			int 엄 = 1;
-			//player 1 승
+		//player 1 승
 			if (m_Ball->m_RelativeLocation.x - m_Ball->m_DstRect.bottom * 0.5
 				<= GameManager::wall->m_Object->m_RelativeLocation.x + 9)
 			{
 				count_p1++;
 				m_Ball->m_RelativeLocation = { 512 - 200, 350 };
+				vb_velocity = { 0, 0 };
+				GameManager::p1->SPlayerAni->m_RelativeLocation = { 512 - 200 , 600 - 100 };
+				GameManager::p2->SPlayerAni->m_RelativeLocation = { 512 + 200 , 600 - 100 };
+				// 여기에 1.0초간 딜레이 걸렸다가 다시 시작하게 하고싶음
 			}
 			//player 2 승
 			if (m_Ball->m_RelativeLocation.x + m_Ball->m_DstRect.bottom * 0.5
@@ -144,8 +148,10 @@ void VBall::Update()
 			{
 				count_p2++;
 				m_Ball->m_RelativeLocation = { 512 + 200, 350 };
+				vb_velocity = { 0, 0 };
+				GameManager::p1->SPlayerAni->m_RelativeLocation = { 512 - 200 , 600 - 100 };
+				GameManager::p2->SPlayerAni->m_RelativeLocation = { 512 + 200 , 600 - 100 };
 			}
-			delay = 0.f;
 		}
 	}
 	// 위쪽 벽을 못나가게 막아줬음

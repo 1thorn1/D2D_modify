@@ -18,7 +18,6 @@ void TextScore::Initialize()
 
 void TextScore::Update()
 {
-	Debug.Log("왜 안나오나요 ㅠ");
 	__super::Update();
 }
 
