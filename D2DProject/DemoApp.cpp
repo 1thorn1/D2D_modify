@@ -118,19 +118,3 @@ void DemoApp::ScoreCount()
 	);
 
 }
-
-//
-//void DemoApp::Update()
-//{
-//
-//	TimeManager::Update();
-//	CheckKeyInput();
-//	tempWorld.Update();
-//
-//
-//}
-//
-//
-//void DemoApp::Render()
-//{
-//}

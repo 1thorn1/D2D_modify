@@ -78,14 +78,17 @@
     <ClInclude Include="SPlayer.h">
       <Filter>소스 파일\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="TitleBackground.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="TitleScript.h">
       <Filter>소스 파일\Script</Filter>
     </ClInclude>
     <ClInclude Include="PlayScript.h">
       <Filter>소스 파일\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleBackground.h">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="PlayScript.cpp">
       <Filter>소스 파일\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

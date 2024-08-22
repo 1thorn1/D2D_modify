@@ -17,6 +17,7 @@ void PlayScene::Initialize()
 	BitmapScene* bit = obj->CreateComponent<BitmapScene>();
 	Script* scr = obj->CreateComponent<Script>();
 	scr->GetOwner()->GetComponent<Script>();
+	bit->m_RelativeScale = { 1.65f,1.3f };
 
 	GameObject* pobj = CreateGameObject<GameObject>();
 	PlayScript* pscr = pobj->CreateComponent<PlayScript>();
@@ -24,13 +25,16 @@ void PlayScene::Initialize()
 
 	ResourceManager::CreateD2DBitmapFromFile(L"Asset/Background.bmp", &bit->m_pBitmap);
 
+	// wall阑 积己窃 
+	GameManager::wall = this->CreateGameObject<Object>();
+	
 	// 标惯
 	GameObject* clone = this->CreateGameObject<GameObject>();
 	AnimationScene* flag = clone->CreateComponent<AnimationScene>();
 	ResourceManager::pInstance->CreateD2DBitmapFromFile(L"Asset/flag.png", &flag->m_pBitmap);
 	ResourceManager::pInstance->CreateAnimationAsset(L"CSV/flag.txt", &flag->m_pAnimationAsset);
 	flag->SetAnimation(4, 0);
-	flag->m_RelativeLocation = { 512 + 30 , 300 + 40 };
+	flag->m_RelativeLocation = { 512 + 40 , 300 + 40 };
 	flag->m_RelativeScale = { 2.0f,2.0f };
 	clone->m_pRootScene = flag;
 
@@ -39,9 +43,6 @@ void PlayScene::Initialize()
 	GameManager::p1 = this->CreateGameObject<SPlayer>();
 	GameManager::p2 = this->CreateGameObject<SPlayer>();
 	GameManager::p1->Initialize();
-
-	// wall阑 积己窃 
-	GameManager::wall = this->CreateGameObject<Object>();
 
 	GameManager::p1->input.up = 'W';
 	GameManager::p1->input.left = 'A';

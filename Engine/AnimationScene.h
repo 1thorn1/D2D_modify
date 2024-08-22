@@ -41,14 +41,13 @@ public:
 	D2D1_RECT_F m_DstRect;					   // RenderTarget의 Destination영역
 	D2D1_VECTOR_2F m_Center;
 
-	bool m_bMirror;							   // 좌우 반전 여부
 	D2D1_MATRIX_3X2_F m_ImageTransform;        // 반대 방향으로 뒤집기 위한 행렬 Scale.x = -0.1f
-
+	bool m_bMirror;							   // 좌우 반전 여부
 	bool m_bAnimationEnd = false;			   // 애니메이션 종료 여부
 
 	bool IsAnimationEnd();					   // 애니메이션 종료 여부
 	void LoadAnimationAsset(const std::wstring strFilePath);
-	virtual void Update();
+	void Update();
 	void Render();
 	void SetAnimation(int index, bool mirror);
 };

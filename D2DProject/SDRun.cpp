@@ -25,7 +25,7 @@ void SDRun::Update()
 	{
 		// 그냥 현재 애니메이션 재생, 앞으로 이동
 		fsm->GetOwner()->m_pRootScene->m_RelativeLocation.x -= 1 * speed * TimeManager::GetDeltaTime();
-		m_pOwner->GetOwner()->GetComponent<AnimationScene>()->m_bMirror = false;
+		m_pOwner->GetOwner()->GetComponent<AnimationScene>()->m_bMirror = false;  
 
 		// 세이브 모션 취하기
 		if (KeyManager.IsKeyDown(VK_RETURN))

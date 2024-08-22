@@ -121,7 +121,7 @@ void VBall::Update()
 	if (m_Ball->m_RelativeLocation.y >= 500 - m_Ball->m_DstRect.bottom * 0.5)
 	{
 		m_Ball->m_RelativeLocation.y = 500 - m_Ball->m_DstRect.bottom * 0.5;
-		vb_velocity.y = 0.f;
+		vb_velocity.y *= -0.5f;
 
 		// 2√  µÙ∑π¿Ã
 		static float delay;

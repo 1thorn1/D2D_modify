@@ -22,4 +22,3 @@ public:
 	static bool CreateAnimationAsset(std::wstring strFilePath, AnimationAsset** asset);
 	static void ReleaseAnimationAsset(std::wstring strFilePath);
 };
-

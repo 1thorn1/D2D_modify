@@ -14,6 +14,8 @@ void TitleScene::Initialize()
 	BitmapScene* bit = obj->CreateComponent<BitmapScene>();
 	Script* scr = obj->CreateComponent<Script>();
 	scr->GetOwner()->GetComponent<Script>();
+	bit->m_RelativeLocation = { 130,-50 };
+	bit->m_RelativeScale = { 1.2f,1.2f };
 
 	GameObject* pobj = CreateGameObject<GameObject>();
 	TitleScript* tscr = pobj->CreateComponent<TitleScript>();

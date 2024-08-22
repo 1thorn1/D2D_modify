@@ -86,21 +86,16 @@ void GameApp::FixedUpdate()
 
 void GameApp::Update()
 {
- /*   InputManager temp;
-    if (temp.IsKeyDown(VK_F1))
-    { 
-    	Debug.Log("in");
-    	SceneManager::SetActWorld("play");
-    }*/
     SceneManager::ChangeWorld();
     SceneManager::Update();
+    TimeManager::Update();
 }
 
 void GameApp::Render()
 {
 
     D2DRender::GetRenderTarget()->BeginDraw();
-    D2DRender::GetRenderTarget()->Clear(D2D1::ColorF(D2D1::ColorF::GreenYellow));
+    D2DRender::GetRenderTarget()->Clear(D2D1::ColorF(D2D1::ColorF::White));
 
     SceneManager::Render(); // 씬매니저를 렌더하면 관리하고 있는 씬들을 
 
