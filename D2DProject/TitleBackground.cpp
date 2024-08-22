@@ -17,6 +17,7 @@ void TitleBackground::Intialize()
 
 void TitleBackground::Update()
 {
+	Debug.Log("titlelog");
 	__super::Update();
 	if (KeyManager.IsKeyDown(input.start))
 	{

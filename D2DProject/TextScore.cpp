@@ -1,37 +1,35 @@
-#include "Score.h"
+#include "TextScore.h"
 #include "VBall.h"
 
-Score::Score()
+ID2D1SolidColorBrush* TextScore::outlineBrush;
+ID2D1SolidColorBrush* TextScore::textBrush;
+
+TextScore::TextScore()
 {
 }
 
-Score::~Score()
+TextScore::~TextScore()
 {
 }
 
-void Score::Initialize()
+void TextScore::Initialize()
 {
 }
 
-void Score::Update()
+void TextScore::Update()
 {
+	Debug.Log("왜 안나오나요 ㅠ");
 	__super::Update();
+}
 
-	D2D1_RECT_F rect = { 480,10, 700,100 };
-	//std::wstring key = L" Score : " + std::to_wstring(VBall::count_p1);
-	std::wstring key = std::to_wstring(VBall::count_p2) + L" : " + std::to_wstring(VBall::count_p1);
-
-	/*D2DRender::GetRenderTarget()->DrawTextW(
-		key.c_str(), static_cast<UINT32>(key.size()),
-		D2DRender::GetIDWriteTextFormat(),
-		rect,
-		D2DRender::GetID2D1SolidColorBrush());*/
-
-	ID2D1SolidColorBrush* outlineBrush = nullptr;
-	ID2D1SolidColorBrush* textBrush = nullptr;
-
+void TextScore::Render()
+{
+	__super::Render();
 	D2DRender::GetRenderTarget()->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::Black, 1.0f), &outlineBrush);
 	D2DRender::GetRenderTarget()->CreateSolidColorBrush(D2D1::ColorF(D2D1::ColorF::DarkOrange, 1.0f), &textBrush);
+
+	D2D1_RECT_F rect = { 480,10, 700,100 };
+	std::wstring key = std::to_wstring(VBall::count_p2) + L" : " + std::to_wstring(VBall::count_p1);
 
 	D2DRender::GetRenderTarget()->DrawTextW
 	(
@@ -57,7 +55,14 @@ void Score::Update()
 	);
 }
 
-void Score::Render()
+void TextScore::Clear()
 {
-	__super::Render();
+	if (outlineBrush) {
+		outlineBrush->Release();
+		outlineBrush = nullptr;
+	}
+	if (textBrush) {
+		textBrush->Release();
+		textBrush = nullptr;
+	}
 }

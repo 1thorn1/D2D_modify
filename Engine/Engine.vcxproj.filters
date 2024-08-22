@@ -93,6 +93,9 @@
     <ClInclude Include="BoxCollider.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="TextScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -168,6 +171,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BoxCollider.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TextScene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

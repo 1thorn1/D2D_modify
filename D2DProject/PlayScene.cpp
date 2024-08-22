@@ -4,6 +4,7 @@
 #include "VBall.h"
 #include "SPlayer.h"
 #include "Object.h"
+#include "TextScore.h"
 
 PlayScene::~PlayScene()
 {
@@ -44,6 +45,9 @@ void PlayScene::Initialize()
 	GameManager::p2 = this->CreateGameObject<SPlayer>();
 	GameManager::p1->Initialize();
 
+	// 스코어 생성
+	GameObject* object = this->CreateGameObject<TextScore>();
+
 	GameManager::p1->input.up = 'W';
 	GameManager::p1->input.left = 'A';
 	GameManager::p1->input.down = 'S';
@@ -51,11 +55,13 @@ void PlayScene::Initialize()
 	GameManager::p1->input.enter = 'V';
 
 	clone = this->CreateGameObject<VBall>();
+
+
 }
 
 void PlayScene::WorldEnter()
 {
-	Debug.Log("enter"); // 여기가 호출되는 중 ㅇㅅㅇ
+	Debug.Log("playscene enter"); // 여기가 호출되는 중 ㅇㅅㅇ
 }
 
 void PlayScene::WorldExit()

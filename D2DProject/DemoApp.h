@@ -14,5 +14,7 @@ public:
 	//void PrintUsedVRAM();
 	void ScoreCount();
 
+	void Uninitialize();
+
 };
 

@@ -26,7 +26,7 @@ void TitleScene::Initialize()
 
 void TitleScene::WorldEnter()
 {
-	Debug.Log("enter");  
+	Debug.Log("titlescene enter");  
 	// 엔터 안되는 중 GameApp에서 Update 호출을 멈췄기 때문
 	// World -> Object -> Component 에서 update loop를 돌려줘야함
 }

@@ -67,6 +67,7 @@ void VBall::Initialize()
 
 void VBall::Update()
 {
+	//Debug.Log("ball update");
 	__super::Update();
 
 	float time = TimeManager::GetDeltaTime();

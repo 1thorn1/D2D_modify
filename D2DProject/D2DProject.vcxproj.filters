@@ -87,7 +87,7 @@
     <ClInclude Include="TitleBackground.h">
       <Filter>소스 파일\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Score.h">
+    <ClInclude Include="TextScore.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -143,7 +143,7 @@
     <ClCompile Include="PlayScript.cpp">
       <Filter>소스 파일\Script</Filter>
     </ClCompile>
-    <ClCompile Include="Score.cpp">
+    <ClCompile Include="TextScore.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

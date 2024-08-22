@@ -1,12 +1,9 @@
 #pragma once
-#include "DemoApp.h"
+#include "Scene.h"
 
-class Score : public GameObject
+class TextScene : public Scene
 {
 public:
-	Score();
-	~Score();
-
 	void Initialize();
 	void Update();
 	void Render();

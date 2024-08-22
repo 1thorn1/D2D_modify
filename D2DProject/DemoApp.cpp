@@ -6,6 +6,7 @@
 #include "GameManager.h"
 #include "TitleScene.h"
 #include "PlayScene.h"
+#include "TextScore.h"
 
 void DemoApp::Initialize(HINSTANCE hInstance)
 {
@@ -117,4 +118,9 @@ void DemoApp::ScoreCount()
 		DWRITE_MEASURING_MODE_NATURAL
 	);
 
+}
+
+void DemoApp::Uninitialize()
+{
+	TextScore::Clear();
 }

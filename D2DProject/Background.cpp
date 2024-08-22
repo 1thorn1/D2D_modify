@@ -1,4 +1,5 @@
 #include "Background.h"
+#include "VBall.h"
 
 Background::Background()
 {
@@ -19,6 +20,7 @@ void Background::Initialize()
 
 void Background::Update()
 {
+	Debug.Log("update?");
 	__super::Update();
 }
 
